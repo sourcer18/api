@@ -78,6 +78,33 @@ Get a list of all users.
                 + language: `nl` (string)
                 + function: `Sales` (string)
 
+### users.list [GET /users.deactivated]
+
+Get a list of all deactivated users.
+
++ Request (application/json;charset=utf-8)
+
+    + Attributes (object)
+        + filter (object, optional)
+            + email: `john@teamleader.eu` (string, optional)
+        + page (Page, optional)
+
++ Response 200 (application/json;charset=utf-8)
+
+    + Attributes (object)
+        + data (array)
+            + (object)
+                + id: `cb8da52a-ce89-4bf6-8f7e-8ee6cb85e3b5` (string)
+                + account (object)
+                    + type: `account` (string)
+                    + id: `0fc55513-7f68-4865-aba0-de5da9e4e43d` (string)
+                + first_name: `John` (string)
+                + last_name: `Smith` (string)
+                + email: `john@teamleader.eu` (string)
+                + telephones (array[Telephone])
+                + language: `nl` (string)
+                + function: `Sales` (string)
+
 ### users.info [GET /users.info]
 
 Get details for a single user.
